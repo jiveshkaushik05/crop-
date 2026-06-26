@@ -1,0 +1,11 @@
+{
+  "name": "crop-yield-predictor",
+  "version": "1.0.0",
+  "scripts": { "start": "node index.js" },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mysql2": "^3.14.0",
+    "cookie-parser": "^1.4.6",
+    "body-parser": "^1.20.2"
+  }
+}
