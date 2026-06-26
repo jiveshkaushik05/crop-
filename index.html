@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crop Yield Prediction</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to right top, #d9f1f1, #f1e7fc);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-container {
+      background: white;
+      padding: 40px 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #2e7d32;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(to right, #37bda4, #14588d);
+    }
+
+    .logout {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #185a9d;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .logout:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>🌾 Crop Yield Prediction</h2>
+    <form method="POST" action="/predict">
+      <label for="crop">Crop Name</label>
+      <input name="crop" id="crop" placeholder="e.g., Wheat" required>
+
+      <label for="soil_type">Soil Type</label>
+      <input name="soil_type" id="soil_type" placeholder="e.g., Loamy" required>
+
+      <label for="ph">Soil pH</label>
+      <input name="ph" type="number" step="0.1" id="ph" placeholder="e.g., 6.8" required>
+
+      <label for="rainfall">Rainfall (mm)</label>
+      <input name="rainfall" type="number" step="0.1" id="rainfall" placeholder="e.g., 120.5" required>
+
+      <label for="temperature">Temperature (°C)</label>
+      <input name="temperature" type="number" step="0.1" id="temperature" placeholder="e.g., 28.5" required>
+
+      <label for="practice_type">Farming Practice</label>
+      <input name="practice_type" id="practice_type" placeholder="e.g., Organic" required>
+
+      <button type="submit">🌱 Predict Yield</button>
+    </form>
+
+    <a class="logout" href="/logout">🚪 Logout</a>
+  </div>
+</body>
+</html>
