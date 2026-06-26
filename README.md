@@ -179,9 +179,3 @@ This project is developed for educational and academic purposes.
 
 ---
 
-## 🙏 Acknowledgements
-
-- Manipal University Jaipur
-- Node.js Community
-- Express.js
-- MySQL
